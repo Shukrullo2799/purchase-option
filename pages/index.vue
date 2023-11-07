@@ -1,5 +1,5 @@
 <template>
-  <div class="h-screen">
+  <div class="main">
     <Slider />
     <div class="flex">
       <MortgageCalculator />
@@ -9,4 +9,9 @@
 </template>
 
 <script setup></script>
-<style scoped></style>
+<style scoped>
+.main {
+  padding: 55px;
+  height: 100vh;
+}
+</style>

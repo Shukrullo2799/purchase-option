@@ -1,0 +1,92 @@
+.slider {
+  margin-bottom: 75px;
+  &_header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 36px;
+
+    &-title {
+      color: $main-color;
+      font-size: 42px;
+      line-height: 120%;
+    }
+  }
+  &_actions {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    &-info {
+      height: 58px;
+      padding: 20px 25px;
+      border-radius: 100px;
+      border: 1px solid $blue;
+      justify-content: center;
+      gap: 10px;
+      flex-shrink: 0;
+      color: $blue;
+      font-size: 16px;
+      background: $white;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      &:hover {
+        background: $blue;
+        color: $white;
+      }
+    }
+    &-arrows {
+      display: flex;
+      gap: 12px;
+      button {
+        width: 58px;
+        height: 58px;
+        border-radius: 100px;
+        background: $white;
+        border: none;
+        cursor: pointer;
+        &:hover {
+          svg {
+            fill: $blue;
+            .arrow {
+              fill: $white;
+            }
+          }
+        }
+      }
+    }
+  }
+  &_item {
+    height: 320px;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    &-title {
+      display: inline-flex;
+      margin-right: auto;
+      width: auto;
+      padding: 10px 12px;
+      border-radius: 10px;
+      background: $white;
+      color: $card-title;
+      font-size: 26px;
+      line-height: 130%;
+    }
+
+    &-text {
+      width: 295px;
+      color: $white;
+      line-height: 140%;
+      padding: 18px 0;
+      border-top: 1px solid $white;
+    }
+    &-btn {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+    }
+  }
+}

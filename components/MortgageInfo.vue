@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="mainInfo">
     <h1>Ипотечная информация</h1>
     <p>
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere deleniti expedita aperiam
@@ -10,3 +10,8 @@
 </template>
 
 <script setup></script>
+<style scoped>
+.mainInfo {
+  width: 70%;
+}
+</style>
