@@ -6,3 +6,10 @@ $card-title: #545863;
 $calc-bg: rgba(8, 62, 76, 0.5);
 $gray: rgba(255, 255, 255, 0.7);
 $gray-text: #778478;
+
+@font-face {
+  font-family: "Gilroy-Medium";
+  font-style: normal;
+  font-weight: 500;
+  src: local(""), url("./font/Gilroy-Medium.ttf") format("truetype");
+}
