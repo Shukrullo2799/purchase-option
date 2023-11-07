@@ -1,0 +1,19 @@
+.calc {
+  width: 31%;
+  margin-right: 30px;
+  // width: 420px;
+  // height: 519px;
+  border-radius: 40px;
+  border: 1px solid $blue;
+  flex-shrink: 0;
+  padding: 25px 35px;
+  &-btn {
+    display: inline-flex;
+    padding: 10px;
+    border-radius: 10px;
+    background: $calc-bg;
+    border: none;
+    align-items: center;
+    gap: 10px;
+  }
+}
