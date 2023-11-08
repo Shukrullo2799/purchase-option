@@ -1,41 +1,75 @@
 <template>
   <div class="calc">
     <button class="calc-btn">Ипотечный калькулятор</button>
-    <div>
-      <label for="price">Стоимость недвижимости</label>
+    <div class="calc-content">
       <div>
-        <div>
-          <input type="range" id="price" name="price" min="1000000" max="10000000" />
-          <input type="text" id="price" name="price" />
-        </div>
-        <div>
-          <input type="range" id="price2" name="price2" min="1000000" max="10000000" />
-          <input type="text" id="price2" name="price2" />
+        <label class="calc-label" for="price">Стоимость, млн ₽</label>
+        <div class="calc-data flex justify-content-between">
+          <div class="w-6 relative">
+            <div class="calc-data_price">
+              <span>{{ form.price }}</span>
+            </div>
+            <input
+              class="calc-data_range-left"
+              type="range"
+              v-model="form.price"
+              min="1"
+              max="10"
+              step="0.1"
+            />
+          </div>
+          <div>|</div>
+
+          <div class="w-6 relative flex justify-content-end">
+            <div>
+              <span>{{ form.price2 }}</span>
+            </div>
+            <input
+              class="calc-data_range-right"
+              type="range"
+              v-model="form.price2"
+              min="1"
+              max="10"
+              step="0.1"
+            />
+          </div>
         </div>
       </div>
-    </div>
-    <div>
-      <input type="checkbox" v-model="form.home" />
-      <label for="home">Квартира</label>
-      <input type="checkbox" v-model="form.apartment" />
-      <label for="apartment">Апартамент</label>
-    </div>
-    <div>
-      <label for="down_payment">Первоначальный взнос, ₽</label>
-      <div>
-        <div>
-          <span>
-            {{ parseInt(maxPrice * (form.down_persent / 100)).toLocaleString("ru-RU") }}
-          </span>
-          <span>{{ form.down_persent }} </span>
+      <div class="flex gap-20">
+        <div class="flex align-items-center">
+          <input class="calc-check" type="checkbox" v-model="form.home" />
+          <label class="calc-label mb-0" for="home">Квартира</label>
         </div>
-        <input type="range" v-model="form.down_persent" />
+        <div class="flex align-items-center">
+          <input class="calc-check" type="checkbox" v-model="form.apartment" />
+          <label class="calc-label mb-0" for="apartment">Апартамент</label>
+        </div>
       </div>
       <div>
-        <label for="credit_term">Срок выплат</label>
-        <div>
-          <span>{{ Math.round(form.credit_term / 12) }} лет </span>
-          <input type="range" v-model="form.credit_term" max="180" min="12" />
+        <label class="calc-label" for="down_payment">Первоначальный взнос, ₽</label>
+        <div class="calc-data">
+          <div class="calc-data_price">
+            <span>
+              {{ parseInt(maxPrice * (form.down_persent / 100)).toLocaleString("ru-RU") }}
+            </span>
+            <span>{{ form.down_persent }} </span>
+          </div>
+          <input class="calc-data_range" type="range" v-model="form.down_persent" />
+        </div>
+      </div>
+      <div>
+        <label class="calc-label" for="credit_term">Срок выплат</label>
+        <div class="calc-data">
+          <div class="calc-data_price">
+            <span>{{ Math.round(form.credit_term / 12) }} лет </span>
+          </div>
+          <input
+            class="calc-data_range"
+            type="range"
+            v-model="form.credit_term"
+            max="180"
+            min="12"
+          />
         </div>
       </div>
     </div>

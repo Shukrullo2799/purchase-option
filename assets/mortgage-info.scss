@@ -1,0 +1,71 @@
+.info {
+  position: relative;
+  &_content {
+    padding: 50px 0 35px 40px;
+    margin-bottom: 25px;
+    background-color: $white;
+    background-image: url("/public/bg.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 100%;
+  }
+  &_label {
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: $main-color;
+    span {
+      color: $blue;
+    }
+  }
+  &_title {
+    display: inline-flex;
+    padding: 12px 15px 10px 15px;
+    border-radius: 16px;
+    background: $white;
+    flex-shrink: 0;
+    color: $blue;
+    font-size: 74px;
+    line-height: 110%;
+    font-weight: 500;
+    margin-bottom: 50px;
+  }
+  &_text {
+    margin-bottom: 40px;
+    color: $gray-text;
+    line-height: 140%;
+  }
+  &_data {
+    display: flex;
+    gap: 72px;
+    color: $white;
+    &-item {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      span {
+        color: $gray;
+      }
+      p {
+        color: $white;
+        font-size: 30px;
+        line-height: 120%;
+      }
+    }
+  }
+  &_btn {
+    padding: 20px 25px;
+    border-radius: 100px;
+    border: 1px solid $blue;
+    background: $blue;
+    justify-content: center;
+    align-items: center;
+    color: $white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    &:hover {
+      background: $calc-bg-hover;
+    }
+  }
+}

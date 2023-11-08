@@ -44,6 +44,24 @@ body {
 .justify-content-between {
   justify-content: space-between;
 }
+.justify-content-end {
+  justify-content: flex-end;
+}
 .align-items-center {
   align-items: center;
+}
+.relative {
+  position: relative;
+}
+.rotate-180 {
+  transform: rotate(180deg);
+}
+.mb-0 {
+  margin-bottom: 0 !important;
+}
+.gap-20 {
+  gap: 20px;
+}
+.w-6 {
+  width: 50% !important;
 }
