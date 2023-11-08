@@ -7,6 +7,9 @@
   border: 1px solid $blue;
   flex-shrink: 0;
   padding: 25px 35px;
+  @include breakpoint(1200) {
+    order: 2;
+  }
   &-btn {
     display: inline-flex;
     padding: 10px;

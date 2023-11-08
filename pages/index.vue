@@ -1,7 +1,7 @@
 <template>
   <div class="main">
     <Slider />
-    <div class="flex">
+    <div class="context">
       <MortgageCalculator />
       <MortgageInfo />
     </div>
@@ -13,5 +13,18 @@
 .main {
   padding: 55px;
   height: 100vh;
+  @media screen and (max-width: 1100px) {
+    padding: 32px;
+  }
+  @media (max-width: 768px) {
+    padding: 20px;
+  }
+}
+.context {
+  display: flex;
+  @media (max-width: 1200px) {
+    flex-direction: column;
+    gap: 20px;
+  }
 }
 </style>

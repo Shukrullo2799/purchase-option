@@ -54,26 +54,22 @@
       class="swiper"
       :slides-per-view="3"
       :space-between="30"
-      :loop="true"
       :effect="'creative'"
-      :autoplay="{
-        delay: 8000,
-        disableOnInteraction: true,
-      }"
-      :creative-effect="{
-        prev: {
-          shadow: false,
-          translate: ['-20%', 0, -1],
-        },
-        next: {
-          translate: ['100%', 0, 0],
-        },
-      }"
       :navigation="{
         prevEl: '.slider_actions-arrows-left',
         nextEl: '.slider_actions-arrows-right',
       }"
-      @navigationNext="console.log('next')"
+      :breakpoints="{
+        250: {
+          slidesPerView: 1,
+        },
+        768: {
+          slidesPerView: 2,
+        },
+        1100: {
+          slidesPerView: 3,
+        },
+      }"
     >
       <SwiperSlide v-for="(slide, i) in data" :key="i">
         <SliderCard :item="slide" />
