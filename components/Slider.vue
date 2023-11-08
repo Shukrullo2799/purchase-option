@@ -72,7 +72,7 @@
       }"
     >
       <SwiperSlide v-for="(slide, i) in data" :key="i">
-        <SliderCard :item="slide" />
+        <SliderCard :item="slide" :style="`animation-delay: 0.${i};`" />
       </SwiperSlide>
     </Swiper>
   </div>

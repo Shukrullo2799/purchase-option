@@ -1,5 +1,5 @@
 <template>
-  <div class="calc">
+  <div class="calc animated animatedFadeInUp fadeInUp">
     <button class="calc-btn">Ипотечный калькулятор</button>
     <div class="calc-content">
       <div>
@@ -35,7 +35,7 @@
           </div>
         </div>
       </div>
-      <div class="flex gap-20">
+      <div class="calc-checks">
         <div class="flex align-items-center">
           <input class="calc-check" type="checkbox" v-model="form.home" />
           <label class="calc-label mb-0" for="home">Квартира</label>

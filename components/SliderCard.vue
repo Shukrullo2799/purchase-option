@@ -1,6 +1,6 @@
 <template>
   <div
-    class="slider_item"
+    class="slider_item animated animatedFadeInUp fadeInUp"
     :style="{
       backgroundImage: `url(/${item.img}.png)`,
     }"

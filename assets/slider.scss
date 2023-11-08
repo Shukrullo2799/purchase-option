@@ -108,10 +108,26 @@
     flex-direction: column;
     justify-content: space-between;
     position: relative;
+    cursor: pointer;
     @include breakpoint(768) {
       background-size: cover;
       border-radius: 25px;
     }
+    &:hover {
+      .slider_item-title {
+        color: $white;
+        background-color: $blue;
+      }
+      .slider_item-btn {
+        transform: rotate(90deg) scale(1.05);
+        svg {
+          circle {
+            fill: $calc-bg-hover;
+          }
+        }
+      }
+    }
+
     &-title {
       display: inline-flex;
       margin-right: auto;
@@ -122,6 +138,7 @@
       color: $card-title;
       font-size: 26px;
       line-height: 130%;
+      transition: all 0.3s ease;
     }
 
     &-text {
@@ -138,6 +155,7 @@
       position: absolute;
       bottom: 0;
       right: 0;
+      transition: all 0.3s ease;
       @include breakpoint(1280) {
         bottom: 7px;
         svg {
