@@ -1,5 +1,5 @@
 <template>
-  <div class="info">
+  <div class="info animated animatedFadeInUp fadeInUp">
     <div class="info_content">
       <p class="info_label">Узнайте о других <span> интересных предложениях </span></p>
       <h1 class="info_title">Ипотека 0.1%</h1>

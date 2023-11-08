@@ -7,4 +7,7 @@ export default defineNuxtConfig({
   },
   css: ["~/assets/main.scss"],
   modules: ["nuxt-swiper"],
+  swiper: {
+    modules: ["navigation"],
+  },
 });

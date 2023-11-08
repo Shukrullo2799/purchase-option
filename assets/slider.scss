@@ -1,21 +1,46 @@
 .slider {
   margin-bottom: 75px;
+  @include breakpoint(1280) {
+    margin-bottom: 50px;
+  }
+  @include breakpoint(768) {
+    margin-bottom: 30px;
+  }
   &_header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 36px;
+    @include breakpoint(475) {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 8px;
+      margin-bottom: 20px;
+    }
 
     &-title {
       color: $main-color;
       font-size: 42px;
       line-height: 120%;
+      @include breakpoint(1280) {
+        font-size: 36px;
+      }
+      @include breakpoint(768) {
+        font-size: 26px;
+      }
     }
   }
   &_actions {
     display: flex;
     align-items: center;
     gap: 20px;
+    @include breakpoint(768) {
+      gap: 10px;
+    }
+    @include breakpoint(475) {
+      width: 100%;
+      justify-content: space-between;
+    }
     &-info {
       height: 58px;
       padding: 20px 25px;
@@ -33,10 +58,18 @@
         background: $blue;
         color: $white;
       }
+      @include breakpoint(768) {
+        font-size: 14px;
+        padding: 8px;
+        height: auto;
+      }
     }
     &-arrows {
       display: flex;
       gap: 12px;
+      @include breakpoint(768) {
+        gap: 4px;
+      }
       button {
         width: 58px;
         height: 58px;
@@ -44,9 +77,20 @@
         background: $white;
         border: none;
         cursor: pointer;
+        transition: all 0.3s ease;
+        @include breakpoint(768) {
+          width: 40px;
+          height: 40px;
+          svg {
+            width: 40px;
+            height: 40px;
+          }
+        }
+
         &:hover {
           svg {
             fill: $blue;
+
             .arrow {
               fill: $white;
             }
@@ -64,6 +108,26 @@
     flex-direction: column;
     justify-content: space-between;
     position: relative;
+    cursor: pointer;
+    @include breakpoint(768) {
+      background-size: cover;
+      border-radius: 25px;
+    }
+    &:hover {
+      .slider_item-title {
+        color: $white;
+        background-color: $blue;
+      }
+      .slider_item-btn {
+        transform: rotate(90deg) scale(1.05);
+        svg {
+          circle {
+            fill: $calc-bg-hover;
+          }
+        }
+      }
+    }
+
     &-title {
       display: inline-flex;
       margin-right: auto;
@@ -74,19 +138,34 @@
       color: $card-title;
       font-size: 26px;
       line-height: 130%;
+      transition: all 0.3s ease;
     }
 
     &-text {
-      width: 295px;
+      width: 80%;
       color: $white;
       line-height: 140%;
       padding: 18px 0;
       border-top: 1px solid $white;
+      @include breakpoint(768) {
+        padding: 10px 0;
+      }
     }
     &-btn {
       position: absolute;
       bottom: 0;
       right: 0;
+      transition: all 0.3s ease;
+      @include breakpoint(1280) {
+        bottom: 7px;
+        svg {
+          width: 55px;
+          height: 55px;
+        }
+      }
+      @include breakpoint(768) {
+        right: 7px;
+      }
     }
   }
 }

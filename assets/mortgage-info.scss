@@ -1,5 +1,9 @@
 .info {
   position: relative;
+  @include breakpoint(1200) {
+    order: 1;
+  }
+  animation-delay: 0.4s;
   &_content {
     padding: 50px 0 35px 40px;
     margin-bottom: 25px;
@@ -8,6 +12,11 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: 100% 100%;
+    @include breakpoint(420) {
+      padding: 50px 0 20px 20px;
+      background-size: cover;
+      border-radius: 18px;
+    }
   }
   &_label {
     position: absolute;
@@ -16,6 +25,16 @@
     color: $main-color;
     span {
       color: $blue;
+    }
+    @include breakpoint(860) {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      right: 20px;
+    }
+    @include breakpoint(590) {
+      display: none;
     }
   }
   &_title {
@@ -29,20 +48,42 @@
     line-height: 110%;
     font-weight: 500;
     margin-bottom: 50px;
+    @include breakpoint(1100) {
+      font-size: 50px;
+    }
+    @include breakpoint(768) {
+      font-size: 40px;
+    }
+    @include breakpoint(420) {
+      font-size: 24px;
+      margin-bottom: 30px;
+      padding: 8px;
+    }
   }
   &_text {
     margin-bottom: 40px;
     color: $gray-text;
     line-height: 140%;
+    @include breakpoint(768) {
+      margin-bottom: 24px;
+      text-align: center;
+    }
   }
   &_data {
     display: flex;
     gap: 72px;
     color: $white;
+    @include breakpoint(768) {
+      flex-wrap: wrap;
+      gap: 30px;
+    }
     &-item {
       display: flex;
       flex-direction: column;
       gap: 14px;
+      @include breakpoint(375) {
+        width: 100%;
+      }
       span {
         color: $gray;
       }
@@ -66,6 +107,13 @@
     transition: all 0.3s ease;
     &:hover {
       background: $calc-bg-hover;
+    }
+    @include breakpoint(768) {
+      width: 100%;
+    }
+    @include breakpoint(425) {
+      padding: 15px;
+      font-size: 14px;
     }
   }
 }
